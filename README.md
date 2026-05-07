@@ -54,14 +54,14 @@ Additional timeline items have been contributed by NYOS parents based on their r
 - The $0 figure means his compensation was routed through an intermediary entity, not paid directly by NYOS.
 - NYOS's conflict-of-interest policy relies on **voluntary self-disclosure** by officers and board members.
 - Dr. Seay's DSS biography explicitly names NYOS as one of the schools where he served as interim leader.
+- **The Seay-to-Rozas leadership sequence repeated at Legacy Traditional Schools — Texas and NYOS.** Legacy board agendas show Dr. Seay was hired as interim superintendent there, and Dr. Rozas was later approved as Legacy's permanent superintendent on a motion co-presented by Dr. Seay. NYOS board records show the same two-person sequence less than two years later, with the formal Seay→Rozas handoff at NYOS on June 27, 2024.
+- **December 10, 2024 — NYOS board ratifies the "DSS audit support contract as to be amended"** (item 5.b; moved by David Ward, seconded by Jessica Conlon). The verb *ratify* means DSS had been engaged and paid before the public vote. The motion came three weeks after a conditional audit acceptance on November 19, 2024, on a corrective-action thread that had been a standing committee item since April 2024.
+- **July 24, 2025 — NYOS board approves "the DSS Consulting Group contract"** under "contracts over $50,000" (item 7.b.i; moved by Hassan Al‑Tabatabaie, seconded by Alli Onni). **Passed 16–0.** The same meeting also closed the NYOS Landing Rock investment account (16–0) and approved a Forbearance Agreement (16–0) — three financial actions bundled in a single sitting.
+- **April 2, 2026 — DSS is publicly listed as a sponsor of the NYOS Charter School Golf Tournament** ("'Fore' Students and Teachers," Morris Williams Golf Course), per the tournament's official registration page.
 
 ### Unconfirmed — Pending Verification
 
-- The Seay-to-Rozas leadership sequence at both Legacy Traditional Schools (2022) and NYOS (2024)
-- December 2024 board vote ratifying a DSS audit support contract
-- July 2025 board vote on DSS contracts exceeding $50,000
-- October 2025 board training session conducted by Dr. Seay
-- 2026 DSS sponsorship of NYOS golf tournament fundraiser
+- October 2025 board training session reportedly conducted by Dr. Seay (not surfaced in the indexed NYOS board corpus through April 2026)
 
 ---
 
@@ -124,4 +124,4 @@ This report is released for public use. Attribution appreciated but not required
 ---
 
 *Maintained by Mark Garcia and contributing NYOS parents.*
-*Last updated: April 19, 2026*
+*Last updated: May 7, 2026*
