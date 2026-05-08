@@ -1,0 +1,228 @@
+/* Shared styling for PIA request letters.
+   Each request HTML links this and toggles body class:
+     body.draft     - DRAFT watermark, "TBD" date, redacted email/phone
+     body.signed    - real date, real email/phone, no watermark (for printing & signing)
+     body.redacted  - real date, redacted email/phone, no watermark (for public link)
+*/
+
+@page {
+  size: Letter;
+  margin: 0.9in 0.95in 0.9in 0.95in;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  /* Intentionally no background-color: lets the @page DRAFT watermark
+     (in draft mode) show through. The @page itself is white. */
+}
+
+body {
+  font-family: Georgia, "Times New Roman", "Liberation Serif", serif;
+  font-size: 10.75pt;
+  line-height: 1.45;
+  color: #1a1a1a;
+}
+
+/* ---------- DRAFT watermark ----------
+   PDF: rendered as an SVG background on every @page (injected by the
+   generator script when mode == draft) so it sits *behind* page content
+   regardless of body backgrounds.
+   Browser preview: a positive-z-index overlay so the watermark is visible
+   in front of the body even without WeasyPrint's @page handling.
+*/
+.watermark { display: none; }
+body.draft .watermark {
+  display: block;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  pointer-events: none;
+  z-index: 9999;
+}
+body.draft .watermark::before {
+  content: "DRAFT";
+  position: absolute;
+  top: 0; left: 0;
+  font-family: Helvetica, Arial, "Liberation Sans", sans-serif;
+  font-size: 130pt;
+  font-weight: 900;
+  color: rgba(170, 0, 0, 0.08);
+  letter-spacing: 0.16em;
+  white-space: nowrap;
+  transform: translate(-50%, -50%) rotate(-32deg);
+  transform-origin: center center;
+}
+
+/* The PDF generator script overrides this with an inline @page rule for
+   DRAFT mode so the watermark is painted as the page background and is
+   visible regardless of body content. */
+
+/* ---------- Sender block ---------- */
+.sender { margin-bottom: 14pt; line-height: 1.4; }
+.sender .name { font-weight: bold; }
+.sender .line { display: block; }
+.sender .contact { display: block; }
+
+/* ---------- Redaction (email/phone black bars) ---------- */
+.email, .phone { white-space: nowrap; }
+body.draft .email,
+body.redacted .email,
+body.draft .phone,
+body.redacted .phone {
+  color: transparent;
+  background: #000;
+  display: inline-block;
+  border-radius: 1px;
+  padding: 0 3px;
+  user-select: none;
+  vertical-align: baseline;
+  line-height: 1;
+}
+/* Approximate widths so bars look like the masked text they replace */
+body.draft .email,
+body.redacted .email { width: 1.55in; height: 11pt; }
+body.draft .phone,
+body.redacted .phone { width: 0.95in; height: 11pt; }
+
+/* ---------- Date ---------- */
+.date-line { margin: 14pt 0 18pt 0; }
+.date-line .actual { display: inline; }
+.date-line .placeholder { display: none; }
+body.draft .date-line .actual { display: none; }
+body.draft .date-line .placeholder {
+  display: inline;
+  font-style: italic;
+  color: #777;
+  letter-spacing: 0.04em;
+}
+
+/* ---------- Recipient ---------- */
+.recipient { margin-bottom: 18pt; line-height: 1.4; }
+.recipient .line { display: block; }
+
+/* ---------- Subject ---------- */
+.subject {
+  font-weight: bold;
+  margin: 0 0 16pt 0;
+  line-height: 1.4;
+}
+
+/* ---------- Body paragraphs ---------- */
+.salutation { margin: 0 0 11pt 0; }
+p { margin: 0 0 9pt 0; }
+
+/* ---------- Section headings ---------- */
+h2 {
+  font-family: Helvetica, Arial, "Liberation Sans", sans-serif;
+  font-size: 10.5pt;
+  font-weight: bold;
+  margin: 14pt 0 5pt 0;
+  letter-spacing: 0.01em;
+}
+
+/* ---------- Records sought list ---------- */
+ol.records {
+  padding-left: 0;
+  margin: 4pt 0 8pt 0;
+  list-style: none;
+  counter-reset: rec;
+}
+ol.records > li {
+  counter-increment: rec;
+  margin: 0 0 9pt 0;
+  padding-left: 22pt;
+  position: relative;
+}
+ol.records > li::before {
+  content: counter(rec) ".";
+  position: absolute;
+  left: 0;
+  top: 0;
+  font-weight: bold;
+  width: 18pt;
+}
+ol.records > li > .heading {
+  font-weight: bold;
+  display: block;
+  margin-bottom: 3pt;
+}
+
+ol.subitems {
+  list-style: none;
+  padding-left: 0;
+  margin: 5pt 0 0 0;
+  counter-reset: sub;
+}
+ol.subitems > li {
+  counter-increment: sub;
+  margin: 0 0 4pt 0;
+  padding-left: 22pt;
+  position: relative;
+}
+ol.subitems > li::before {
+  content: counter(sub, lower-alpha) ".";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 18pt;
+}
+
+ol.romans {
+  list-style: none;
+  padding-left: 0;
+  margin: 4pt 0;
+  counter-reset: rom;
+}
+ol.romans > li {
+  counter-increment: rom;
+  margin: 0 0 3pt 0;
+  padding-left: 26pt;
+  position: relative;
+}
+ol.romans > li::before {
+  content: counter(rom, lower-roman) ".";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 22pt;
+  text-align: right;
+  padding-right: 4pt;
+  box-sizing: border-box;
+}
+
+/* ---------- Closing & signature ---------- */
+.closing { margin-top: 16pt; }
+
+.signoff { margin-top: 22pt; }
+
+.signature-block { margin-top: 4pt; }
+
+.signature-line {
+  display: block;
+  height: 38pt;
+}
+
+.signature-name { font-weight: bold; }
+
+.signoff-date .actual { display: inline; }
+.signoff-date .placeholder { display: none; }
+body.draft .signoff-date .actual { display: none; }
+body.draft .signoff-date .placeholder {
+  display: inline;
+  font-style: italic;
+  color: #777;
+}
+
+/* ---------- Avoid breaking inside list items ---------- */
+ol.records > li,
+ol.subitems > li,
+ol.romans > li {
+  page-break-inside: avoid;
+  break-inside: avoid;
+}
+
+h2 { page-break-after: avoid; break-after: avoid; }
+.subject, .salutation, .recipient { page-break-inside: avoid; break-inside: avoid; }

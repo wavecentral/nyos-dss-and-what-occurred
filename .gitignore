@@ -1,0 +1,24 @@
+# Local-only files containing personal contact info (email / phone / home address).
+# These stay on the maintainer's machine and out of the public repo.
+
+# Master HTML sources for individual PIA requests
+# (CSS hides email/phone visually, but the strings are still in the source)
+pia-[0-9][0-9]-*.html
+
+# Unredacted PIA PDFs — only redacted/draft variants are safe to publish
+pia-[0-9][0-9]-*.pdf
+!pia-[0-9][0-9]-*_draft.pdf
+!pia-[0-9][0-9]-*_redacted.pdf
+
+# Generator script with hardcoded contact constants
+generate-pia-pdf.py
+
+# Email drafts to NYOS (contain contact info in the signature line)
+pia-*-email-*.txt
+
+# OS / editor cruft
+.DS_Store
+*.swp
+*~
+__pycache__/
+*.pyc

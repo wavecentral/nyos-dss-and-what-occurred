@@ -72,17 +72,19 @@ Additional timeline items have been contributed by NYOS parents based on their r
 
 Active and planned requests under the Texas Public Information Act (Government Code, Chapter 552):
 
-| Request | Status |
-|---------|--------|
-| Contract governing Dr. Seay's interim engagement | 📝 Formulating |
-| All invoices/payments to DSS and Leadership4School LLC | 📝 Formulating |
-| Board minutes — Seay tenure (Feb–June 2024) | 🔍 Identified |
-| Board minutes — DSS contract votes (Dec 2024, July 2025) | 🔍 Identified |
-| Conflict-of-interest disclosure forms (FY 2023–2024) | 🔍 Identified |
-| All vendor contracts for financial/accounting services | 🔍 Identified |
-| Board training engagement records (Oct 2025) | 🔍 Identified |
-| DSS golf tournament sponsorship records | 🔍 Identified |
-| Independent audit and management letter (Blazek & Vetterling) | 🔍 Identified |
+The full tracker is published at [/pia-requests.html](https://wavecentral.github.io/nyos-dss-and-what-occurred/pia-requests.html) and woven into Section&nbsp;VII of the main report.
+
+| # | Request | Status |
+|---|---------|--------|
+| 01 | **Keystone** — Dr. Seay's interim engagement & payments to Leadership4School / DSS · [View PDF Request](./pia-01-seay-engagement_redacted.pdf) | 📨 **Submitted** (May 7, 2026) |
+| 02 | Board minutes & agendas, Seay tenure (Feb–Jun 2024) | 🔍 Identified |
+| 03 | Dec 10, 2024 & Jul 24, 2025 DSS-vote materials | 🔍 Identified |
+| 04 | Conflict-of-interest disclosures, FY 2023 – FY 2025 | 🔍 Identified |
+| 05 | All vendor contracts (financial / accounting / IT / audit) | 🔍 Identified |
+| 06 | Oct 24, 2025 board training engagement records | 🔍 Identified |
+| 07 | DSS golf tournament sponsorship records | 🔍 Identified |
+| 08 | Independent audit and management letter (Blazek & Vetterling) | 🔍 Identified |
+| 09 | Audit corrective-action plan (Nov 19, 2024 onward) | 🔍 Identified |
 
 **Status key:**
 - 🔍 **Identified** — Request scope defined, not yet submitted
