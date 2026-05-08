@@ -22,19 +22,22 @@
 .request__folder:hover{color:var(--accent);border-bottom-color:var(--accent)}
 .request__folder .icon{color:var(--ink-3);display:inline-flex}
 details.pia-section{border:1px solid var(--rule);border-left:4px solid var(--accent);border-radius:0 4px 4px 0;background:#fff;margin:2rem 0 1.5rem;overflow:hidden}
-details.pia-section>summary{list-style:none;cursor:pointer;padding:1.1rem 1.3rem;display:flex;align-items:center;justify-content:space-between;gap:1rem;flex-wrap:wrap;position:relative;outline:none;background:#fff;border-bottom:1px solid transparent;transition:border-color .2s ease}
+details.pia-section>summary{list-style:none;cursor:pointer;padding:1.15rem 1.3rem;display:flex;align-items:center;justify-content:space-between;gap:1.2rem;flex-wrap:wrap;position:relative;outline:none;background:#fff;border-bottom:1px solid transparent;transition:border-color .2s ease,background-color .15s ease}
+details.pia-section>summary:hover{background:var(--paper)}
 details.pia-section>summary::-webkit-details-marker{display:none}
 details.pia-section[open]>summary{border-bottom-color:var(--rule)}
+.pia-section__lead{flex:1;min-width:0;display:flex;flex-direction:column;gap:.32rem}
 .pia-section__head{margin:0 !important;font-size:1.45rem;border:none !important;line-height:1.2}
-.pia-section__hint{font-family:var(--sans);font-size:.78rem;color:var(--ink-3);letter-spacing:.02em;display:inline-flex;align-items:center;gap:.4rem;flex-wrap:wrap}
+.pia-section__hint{font-family:var(--sans);font-size:.78rem;color:var(--ink-3);letter-spacing:.02em}
 .pia-section__count{font-weight:600;color:var(--ink-2)}
-.pia-section__expand{color:var(--accent);font-weight:600;display:inline-flex;align-items:center;position:relative;padding-right:14px}
-.pia-section__expand::after{content:'';position:absolute;right:0;top:50%;width:7px;height:7px;border-right:1.6px solid currentColor;border-bottom:1.6px solid currentColor;transform:translateY(-70%) rotate(45deg);transition:transform .25s ease}
-details.pia-section[open]>summary .pia-section__expand::after{transform:translateY(-30%) rotate(-135deg)}
-details.pia-section[open]>summary .pia-section__expand .pia-section__expand-label::before{content:'Click to collapse'}
-details.pia-section:not([open])>summary .pia-section__expand .pia-section__expand-label::before{content:'Click to expand'}
+.pia-section__cta{display:inline-flex;align-items:center;gap:.6rem;background:var(--accent);color:#fff;font-family:var(--sans);font-weight:700;font-size:.85rem;letter-spacing:.04em;text-transform:uppercase;padding:.7rem 1.15rem;border-radius:4px;flex-shrink:0;white-space:nowrap;box-shadow:0 1px 0 rgba(0,0,0,.06);transition:background .15s ease,transform .12s ease}
+details.pia-section>summary:hover .pia-section__cta{background:var(--accent-hover);transform:translateY(-1px)}
+.pia-section__cta-arrow{display:inline-block;width:8px;height:8px;border-right:2px solid currentColor;border-bottom:2px solid currentColor;transform:translateY(-2px) rotate(45deg);transition:transform .25s ease}
+details.pia-section[open]>summary .pia-section__cta-arrow{transform:translateY(2px) rotate(-135deg)}
+details.pia-section:not([open])>summary .pia-section__cta-label::before{content:'View all 9 requests'}
+details.pia-section[open]>summary .pia-section__cta-label::before{content:'Collapse tracker'}
 .pia-section__body{padding:1.6rem 1.3rem 1.4rem}
-@media(max-width:600px){.pia-section__head{font-size:1.2rem}.pia-section__hint{font-size:.7rem}}
+@media(max-width:600px){.pia-section__head{font-size:1.2rem}.pia-section__hint{font-size:.7rem}.pia-section__cta{font-size:.78rem;padding:.6rem 1rem;width:100%;justify-content:center}}
 details.request>summary{list-style:none;cursor:pointer;outline:none;padding-right:28px;position:relative}
 details.request>summary::-webkit-details-marker{display:none}
 details.request>summary.request__head{margin-bottom:0;padding-bottom:.85rem;border-bottom:1px solid transparent;transition:border-color .2s ease}
@@ -212,8 +215,14 @@ details.request>summary:hover::after{border-color:var(--accent)}.update-banner.i
 <hr class="section-rule">
 <details class="pia-section" id="pia-section">
 <summary>
+<div class="pia-section__lead">
 <h2 class="section-head pia-section__head">VII. Public Records Request Tracker</h2>
-<span class="pia-section__hint"><span class="pia-section__count">9 records requests</span> &middot; 1 submitted &middot; 8 drafts ready &middot; <span class="pia-section__expand"><span class="pia-section__expand-label"></span></span></span>
+<span class="pia-section__hint"><span class="pia-section__count">9 records requests</span> &middot; 1 submitted &middot; 8 drafts ready</span>
+</div>
+<span class="pia-section__cta">
+<span class="pia-section__cta-label"></span>
+<span class="pia-section__cta-arrow"></span>
+</span>
 </summary>
 <div class="pia-section__body">
 
@@ -238,7 +247,7 @@ details.request>summary:hover::after{border-color:var(--accent)}.update-banner.i
 
 <div class="requests">
 
-<details class="request request--keystone">
+<details class="request request--keystone" open>
 <summary class="request__head">
 <div class="request__num">01</div>
 <div class="request__title-wrap">
