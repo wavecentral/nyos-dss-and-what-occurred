@@ -16,6 +16,9 @@ generate-pia-pdf.py
 # Email drafts to NYOS (contain contact info in the signature line)
 pia-*-email-*.txt
 
+# Microsoft Clarity analytics exports (visitor data, internal use only)
+clarity/
+
 # OS / editor cruft
 .DS_Store
 *.swp
