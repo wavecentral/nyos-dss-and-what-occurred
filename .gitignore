@@ -19,6 +19,12 @@ pia-*-email-*.txt
 # Microsoft Clarity analytics exports (visitor data, internal use only)
 clarity/
 
+# Private working notes — call transcripts, prep, recordings of conversations
+# (Contain real names, personal context, and on-the-record-but-personal remarks.)
+pia-williams-*.md
+pia-*-call-*.md
+pia-*-transcript-*.md
+
 # OS / editor cruft
 .DS_Store
 *.swp
